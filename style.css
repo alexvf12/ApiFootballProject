@@ -1,0 +1,195 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #e5e5e5;
+    margin: auto;
+}
+
+nav{
+    background-color: white;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    display: flex;
+}
+
+#lateral{
+    background-color: white;
+    width: 25%;
+    height: 100vh;
+    margin: 1.5em;
+    border-radius: 0.3em;
+    padding-left: 1em;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+#new{
+    background-image: url("champions.jpg");
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;}
+
+ #news{
+    display: flex;
+    justify-content: space-between;
+}
+
+#new{
+    width: 100%;
+    height: 40vh;
+    margin-top: 1.5em;
+    border-radius: 0.3em;
+    
+}
+
+#trending{
+    width: 35%;
+    height: 40vh;
+    border-radius: 0.3em;
+    margin: 1.5em;
+    padding-left: 1em;
+    background-color: white;
+
+
+}
+
+#filters{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3em;
+    margin-left: 1em;
+} 
+
+#filter{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav1{
+    margin-left: 1.5em;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    width: 50%;
+}
+
+.nav2{
+    margin-right: 1.5em;
+    position: relative;
+    display: inline-block;    
+}
+
+.nav2 ion-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+  }
+
+.search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #2dcc70;
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 10px;
+  }
+
+  .logo{
+    margin-top: 0.5em;
+    margin-right: 3em;
+  }
+
+  .league{
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1em;
+
+  }
+
+   .league a{
+    margin-left: 1em;
+    font-size: 0.8em;
+  } 
+
+  .league div{
+    display: flex;
+    align-items: center;
+
+  }
+
+  ion-icon{
+    color: #2dcc70;
+  }
+
+  .match{
+    background-color: white;
+    height: 10vh;
+    border-radius: 0.3em;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .match-content{
+    display: flex;
+    align-items: center;
+}
+
+.team-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.match-info{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.match-links{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+  
+  .team-logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .coach{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

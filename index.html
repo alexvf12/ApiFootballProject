@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de Ligas</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <img width="145" height="80" class="logo" src="Logo3.png" alt="Logo" />
+        <a href="">Home</a>
+        <a href="">Matches</a>
+        <a href="">Favorites</a>
+      </div>
+      <div class="nav2">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search matches, players..."
+        />
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+    </nav>
+    <main>
+      <div id="lateral">
+        <div id="leagues">
+          <h4>Leagues</h4>
+          <div id="league-list"></div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="news">
+          <div id="new"></div>
+          <div id="trending">
+            <h4>Trending Now</h4>
+          </div>
+        </div>
+        <div id="filters">
+          <h3>Live matches</h3>
+          <div id="filter">
+            <p>Filter:</p>
+            <select name="leagues">
+              <option>Premier League</option>
+              <option>LaLiga Santander</option>
+              <option>Bundesliga</option>
+            </select>
+            <select name="Seasons">
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+            </select>
+            <select name="Country">
+              <option>England</option>
+              <option>Spain</option>
+              <option>Germany</option>
+            </select>
+          </div>
+          <h4>View All</h4>
+        </div>
+        <div id="matches"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
