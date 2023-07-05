@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/sharedComponents.css" />
+    <link rel="stylesheet" href="../styles/details.css">
+    <title>Details Leagues</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <img
+          width="145"
+          height="80"
+          class="logo"
+          src="/srcs/Logo3.png"
+          alt="Logo"
+        />
+        <a href="">Home</a>
+        <a href="">Matches</a>
+        <a href="">Favorites</a>
+      </div>
+      <div class="nav2">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search matches, players..."
+        />
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+    </nav>
+    <main>
+      <div id="lateral">
+        <div id="leagues">
+          <h4>Leagues</h4>
+          <div id="league-list"></div>
+        </div>
+      </div>
+      <div id="details"></div>
+      <div></div>
+    </main>
+    <script src="../js/detailLeague.js"></script>
+    <script src="../js/leagues.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

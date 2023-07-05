@@ -1,34 +1,4 @@
-*{
-    font-family: sans-serif;
-    text-decoration: none;
-}
 
-body{
-    background-color: #e5e5e5;
-    margin: auto;
-}
-
-nav{
-    background-color: white;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-main{
-    display: flex;
-}
-
-#lateral{
-    background-color: white;
-    width: 25%;
-    height: 100vh;
-    margin: 1.5em;
-    border-radius: 0.3em;
-    padding-left: 1em;
-}
 
 #content{
     display: flex;
@@ -37,7 +7,7 @@ main{
     height: 100vh;
 }
 #new{
-    background-image: url("champions.jpg");
+    background-image: url("../srcs/champions.jpg");
     height: 500px; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -148,31 +118,40 @@ main{
 
   .match{
     background-color: white;
-    height: 10vh;
+    height: 12vh;
     border-radius: 0.3em;
     margin-right: 1.5em;
     margin-bottom: 0.5em;
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    padding: 0 1.5em;
   }
 
   .match-content{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 50%;
 }
 
 .team-info{
     display: flex;
-    justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+    width: 100%;
 }
 
 .match-info{
     display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
+    align-items: center;
+    width: 30%;
+}
+
+.match-info ion-icon{
+    margin-left: 0.5em;
 }
 
 .match-links{
@@ -182,7 +161,9 @@ main{
 	justify-content: space-around;
 	align-items: center;
 }
-  
+  .team-logo{
+    margin: 0 1em;
+  }
   .team-logo img {
     width: 45px;
     height: 45px;
@@ -192,4 +173,21 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .champions{
+    display: flex;
+    justify-content: center;
+  }
+
+  .match{
+    color: rgba(0, 0, 0, 0.35);
+  }
+
+  .score{
+    color: black;
+  }
+
+  .match-links a ion-icon{
+    margin-right: 1.5em;
   }
