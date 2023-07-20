@@ -7,7 +7,7 @@
     height: 100vh;
 }
 #new{
-    background-image: url("../srcs/champions.jpg");
+    background-image: url("../assets/champions.jpg");
     height: 500px; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -33,8 +33,6 @@
     margin: 1.5em;
     padding-left: 1em;
     background-color: white;
-
-
 }
 
 #filters{
@@ -112,9 +110,6 @@
 
   }
 
-  ion-icon{
-    color: #2dcc70;
-  }
 
   .match{
     background-color: white;
@@ -165,8 +160,8 @@
     margin: 0 1em;
   }
   .team-logo img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 30px;
   }
 
   .coach{
@@ -190,4 +185,27 @@
 
   .match-links a ion-icon{
     margin-right: 1.5em;
+  }
+
+  .results-container {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #2dcc70;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5em;
+    z-index: 1; 
+    max-height: 200px;
+    overflow-y: auto; 
+  }
+
+  .results-container .league {
+    border-bottom: 0.5px solid #2dcc70;
+  }
+
+  .league{
+    padding-bottom: 0.5em;
   }

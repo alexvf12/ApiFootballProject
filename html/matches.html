@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/sharedComponents.css" />
+    <link rel="stylesheet" href="../styles/details.css" />
+    <script
+      src="https://kit.fontawesome.com/d6a1dd77be.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>All matches</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav1">
+        <img
+          width="145"
+          height="80"
+          class="logo"
+          src="/assets/Logo3.png"
+          alt="Logo"
+        />
+        <a href="../html/home.html">Home</a>
+        <a href="../html/matches.html">Matches</a>
+        <a href="">Favorites</a>
+      </div>
+      <div class="nav2">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search matches, players..."
+        />
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+    </nav>
+    <main>
+        <div id="lateral">
+            <div id="leagues">
+              <h4>Top Leagues</h4>
+              <div id="league-list"></div>
+            </div>
+          </div>
+      <div
+        id="wg-api-football-games"
+        data-host="v3.football.api-sports.io"
+        data-key="caf1de4c27bae43908929e13e3d0a255"
+        data-date=""
+        data-league=""
+        data-season=""
+        data-theme=""
+        data-refresh="15"
+        data-show-toolbar="true"
+        data-show-errors="false"
+        data-show-logos="true"
+        data-modal-game="true"
+        data-modal-standings="true"
+        data-modal-show-logos="true"
+      ></div>
+          <div id="favorites"></div>
+    </main>
+</main>
+<script src="../js/detailLeague.js"></script>
+<script src="../js/leagues.js"></script>
+<script
+type="module"
+src="https://widgets.api-sports.io/2.0.3/widgets.js"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+</body>
+</html>

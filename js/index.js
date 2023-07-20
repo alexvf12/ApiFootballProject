@@ -141,7 +141,7 @@ async function addLiveMatches() {
       favoritesLink.innerHTML = `<ion-icon name="star-outline"></ion-icon>`;
 
       const detailsLink = document.createElement("a");
-      detailsLink.href = "#";
+      detailsLink.href = `detailMatch.html?id=${match.fixture.id}`;
       detailsLink.innerHTML = `View Details <ion-icon name="arrow-forward-circle-outline"></ion-icon>`;
 
       matchLinks.appendChild(favoritesLink);
@@ -203,10 +203,7 @@ async function addGuardiolaInfo() {
     console.log(err);
   }
 }
-
-async function main() {
-  await addLiveMatches();
-  await addGuardiolaInfo();
-}
-
-main().catch(console.error);
+document.addEventListener("DOMContentLoaded", () => {
+   addLiveMatches();
+   addGuardiolaInfo();
+});

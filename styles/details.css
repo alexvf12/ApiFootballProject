@@ -1,0 +1,243 @@
+#details, #wg-api-football-games, #wg-api-football-game{
+    background-color: white;
+    width: 75%;
+    margin: 1.5em 0;
+    border-radius: 0.3em;
+    padding-bottom: 1em;
+}
+
+#favorites{
+    background-color: white;
+    width: 25%;
+    margin: 1.5em;
+    border-radius: 0.3em;
+    padding-left: 1em;
+}
+
+.team{
+    background-color: #01d0994f;
+    height: 2.8em;
+    padding: 0 1em;
+    border-radius: 0.3em;
+    margin: 0.3em;
+    font-size: 0.9em;
+    display: grid;
+    grid-template-columns: 0.3fr 1.5fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    
+}
+
+.league-logo { grid-area: 1 / 1 / 2 / 2; }
+.league-name { grid-area: 1 / 2 / 2 / 3; }
+.league-founded { 
+    grid-area: 1 / 3 / 2 / 4; 
+    display: flex;
+    align-items: center;
+}
+.league-stadium { 
+    grid-area: 1 / 4 / 2 / 5;
+    display: flex;
+    align-items: center; 
+}
+.league-more-details{
+    grid-area: 1 / 5 / 2 / 6;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: end;
+}
+
+.league-more-details a{
+    text-decoration: none;
+    color: black;
+}
+
+.league-details{
+    padding: 2em;
+    padding-bottom: 0.5em;
+}
+
+.match-details{
+    display: flex;
+    justify-content: space-between;
+    height: 13em;
+    padding: 2em;
+}
+
+.info-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: em;
+}
+
+.time-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 33%;
+
+}
+
+.score-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 4em;
+    height: 33%;
+}
+
+.stadium-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 33%;
+
+}
+
+.time-date-details{
+    display: flex;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.450);
+}
+
+.stadium-details p{
+    color: rgba(0, 0, 0, 0.450);
+}
+
+.info-details ion-icon{
+    width: 2em;
+    height: 2em;
+}
+
+#buttons-container{
+    padding: 0 0.5em;
+    display: flex;
+}
+#buttons-container div select{
+    margin-left: 1.5em;
+}
+
+#buttons-container button{
+
+  background-color: #01d099;
+  border-radius: 5px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 11px;
+  margin: 0em 0 0 2em;
+  padding: 10px 18px;
+}
+
+#buttons-container select{
+    padding: 0em 1em;
+  }
+
+#buttons-container button:hover {
+  background-color: #01d099a3;
+}
+
+.firstHalf, .secondHalf{
+    background-color: #01d099;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 11px;
+    margin: 2em 0.3em;
+    padding: 8px 18px;
+}
+
+.firstHalfList li, .secondHalfList li{
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
+.homeEvent{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.awayEvent{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+
+i{
+    color: #01d099d4;
+    margin-right: 1em;
+}
+
+select{
+    width: 7.5em;
+    height: 2.5em;
+    background-color: #01d099;
+    border-radius: 0.3em;
+    border: none;
+    color: #FFFFFF;
+}
+
+/* Table */
+
+.statistics-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+.statistics-table thead tr {
+    background-color: #01d099;
+    color: #ffffff;
+    text-align: left;
+}
+
+.statistics-table th,
+.statistics-table td {
+    padding: 12px 15px;
+}
+
+#players-container div{
+    background-color: #01d099;
+    width: 6em;
+    height: 8em;
+    padding: 1em;
+    margin: 0.5em 0;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: space-between;
+    font-size: 0.8em;
+    border-radius: 0.2em;
+}
+
+#players-container img{
+    width: 6em;
+}
+
+#players-container{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+    margin: 1em;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* MATCHES */
+
+.wg_toolbar{
+    border-radius: 0.5em;
+}
+
+.wg-dropbtn{
+    border-radius: 0.3em;
+}
