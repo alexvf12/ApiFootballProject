@@ -17,15 +17,17 @@ async function addRandomLeagues() {
     const listContainer = document.querySelector("#league-random-list");
 
     randomLeagues.forEach((league) => {
-      const div = document.createElement("div");
-      const contentDiv = document.createElement("div");
       const a = document.createElement("a");
+      a.textContent = league.league.name;
+      a.href = `detailLeague.html?id=${league.league.id}`;
+      a.style.whiteSpace = "nowrap";
+
+      const div = document.createElement("a");
+      div.href = `detailLeague.html?id=${league.league.id}`;
+      const contentDiv = document.createElement("div");
       const img = document.createElement("img");
       const icon = document.createElement("ion-icon");
 
-      a.textContent = league.league.name;
-      a.href = `detailLeague.html?id=${league.league.id}`;
-      a.style.whiteSpace = "nowrap"
       img.src = league.league.logo;
       img.alt = "Logo" + league.league.name;
       img.width = 25;
@@ -36,11 +38,10 @@ async function addRandomLeagues() {
 
       contentDiv.appendChild(img);
       contentDiv.appendChild(a);
-
       div.appendChild(contentDiv);
       div.appendChild(icon);
 
-      listContainer.appendChild(div);
+      listContainer.appendChild(div); // Agregamos el div al contenedor de la lista
     });
   } catch (err) {
     console.log(err);
@@ -53,14 +54,16 @@ async function addTopLeagues() {
     const listContainer = document.querySelector("#league-list");
 
     leagues.forEach((league) => {
-      const div = document.createElement("div");
-      const contentDiv = document.createElement("div");
       const a = document.createElement("a");
+      a.textContent = league.league.name;
+      a.href = `detailLeague.html?id=${league.league.id}`;
+
+      const div = document.createElement("a");
+      div.href = `detailLeague.html?id=${league.league.id}`;
+      const contentDiv = document.createElement("div");
       const img = document.createElement("img");
       const icon = document.createElement("ion-icon");
 
-      a.textContent = league.league.name;
-      a.href = `detailLeague.html?id=${league.league.id}`;
       img.src = league.league.logo;
       img.alt = "Logo" + league.league.name;
       img.width = 25;
@@ -71,11 +74,10 @@ async function addTopLeagues() {
 
       contentDiv.appendChild(img);
       contentDiv.appendChild(a);
-
       div.appendChild(contentDiv);
       div.appendChild(icon);
 
-      listContainer.appendChild(div);
+      listContainer.appendChild(div); // Agregamos el div al contenedor de la lista
     });
   } catch (err) {
     console.log(err);
@@ -85,5 +87,4 @@ async function addTopLeagues() {
 document.addEventListener("DOMContentLoaded", () => {
   addRandomLeagues();
   addTopLeagues();
-
 });

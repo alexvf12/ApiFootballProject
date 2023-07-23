@@ -91,7 +91,7 @@
     margin-right: 3em;
   }
 
-  .league{
+  .league, .favorite-league{
     margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
@@ -99,12 +99,12 @@
 
   }
 
-   .league a{
+   .league a , .favorite-league a{
     margin-left: 1em;
     font-size: 0.8em;
   } 
 
-  .league div{
+  .league div , .favorite-league div{
     display: flex;
     align-items: center;
 
@@ -206,6 +206,6 @@
     border-bottom: 0.5px solid #2dcc70;
   }
 
-  .league{
+  .league , .favorite-league{
     padding-bottom: 0.5em;
   }
