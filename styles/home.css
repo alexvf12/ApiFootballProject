@@ -6,24 +6,10 @@
     width: 100%;
     height: 100vh;
 }
-#new{
-    background-image: url("../assets/champions.jpg");
-    height: 500px; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;}
 
  #news{
     display: flex;
     justify-content: space-between;
-}
-
-#new{
-    width: 100%;
-    height: 40vh;
-    margin-top: 1.5em;
-    border-radius: 0.3em;
-    
 }
 
 #trending{
@@ -113,7 +99,7 @@
 
   .match{
     background-color: white;
-    height: 12vh;
+    height: 3.5em;
     border-radius: 0.3em;
     margin-right: 1.5em;
     margin-bottom: 0.5em;
@@ -160,7 +146,7 @@
     margin: 0 1em;
   }
   .team-logo img {
-    width: 40px;
+    width: 30px;
     height: 30px;
   }
 
@@ -209,3 +195,46 @@
   .league , .favorite-league{
     padding-bottom: 0.5em;
   }
+
+  .match-links a ion-icon{
+    width: 1.5em;
+    height: 1.3em;
+  }
+
+
+  /* ----------CAROUSEL---------- */
+
+  #new {
+    background-image: url("../assets/carrousel1.png"),
+      url("../assets/carrousel2.png"),
+      url("../assets/carrousel3.png");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    margin-top: 1.5em;
+    border-radius: 0.3em;
+  
+    animation: carousel 18s infinite;
+  }
+  
+  
+  @keyframes carousel {
+    0%, 25% {
+      background-image: url("../assets/carrousel1.png");
+    }
+    33.33%, 58.33% {
+      background-image: url("../assets/carrousel2.png");
+    }
+    66.66%, 91.66% {
+      background-image: url("../assets/carrousel3.png");
+    }
+  }
+  
+  
+  
+  
+  
+  

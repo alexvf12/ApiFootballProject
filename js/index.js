@@ -136,15 +136,10 @@ async function addLiveMatches() {
       const matchLinks = document.createElement("div");
       matchLinks.classList.add("match-links");
 
-      const favoritesLink = document.createElement("a");
-      favoritesLink.href = "#";
-      favoritesLink.innerHTML = `<ion-icon name="star-outline"></ion-icon>`;
-
       const detailsLink = document.createElement("a");
       detailsLink.href = `detailMatch.html?id=${match.fixture.id}`;
-      detailsLink.innerHTML = `View Details <ion-icon name="arrow-forward-circle-outline"></ion-icon>`;
+      detailsLink.innerHTML = `<ion-icon name="arrow-forward-circle-outline"></ion-icon>`;
 
-      matchLinks.appendChild(favoritesLink);
       matchLinks.appendChild(detailsLink);
 
       matchBox.appendChild(matchLinks);
@@ -203,7 +198,27 @@ async function addGuardiolaInfo() {
     console.log(err);
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
-   addLiveMatches();
-   addGuardiolaInfo();
+  addLiveMatches();
+  addGuardiolaInfo();
+  markActiveIcon();
 });
+
+function markActiveIcon() {
+  // Obtener el nombre de la página actual de la URL
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Verificar si estamos en la página "home.html" y activar el ícono correspondiente
+  if (currentPage === "home.html") {
+    const homeIcon = document.getElementById("home-icon");
+    homeIcon.classList.add("active-icon");
+  }
+
+  // Verificar si estamos en la página "matches.html" y activar el ícono correspondiente
+  if (currentPage === "matches.html") {
+    const matchesIcon = document.getElementById("matches-icon");
+    matchesIcon.classList.add("active-icon");
+  }
+}
+

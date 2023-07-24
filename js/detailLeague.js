@@ -65,7 +65,7 @@ async function addContentLeague() {
     }
 
     enlaceFavoritos.addEventListener("click", () => {
-      toggleFavorito(league.id, enlaceFavoritos);
+      toggleFavoritoLeague(league.id, enlaceFavoritos);
     });
     div.appendChild(enlaceFavoritos);
     leagueDiv.appendChild(div);

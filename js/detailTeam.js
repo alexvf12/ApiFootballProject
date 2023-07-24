@@ -1,7 +1,7 @@
 const apiKey = "caf1de4c27bae43908929e13e3d0a255";
 const apiUrl = "https://v3.football.api-sports.io";
 
-let showStatisticsActive = false;
+let showStatisticsActive = true;
 let showPlayersActive = false;
 let teamsWithLeagueId = [];
 let playersLoaded = false;
@@ -17,7 +17,6 @@ async function fetchInfoTeam() {
   });
   const data = await response.json();
   const team = await data.response[0].team;
-  console.log(team);
   return team;
 }
 
@@ -78,13 +77,40 @@ async function addContentTeam() {
   const detailsElement = document.getElementById("details");
   const leagueDiv = document.createElement("div");
   leagueDiv.classList.add("league-details");
+
   const img = document.createElement("img");
   img.src = team.logo;
   img.alt = `${team.name} logo`;
   leagueDiv.appendChild(img);
+
+  const div = document.createElement("div");
+  div.classList.add("favorites");
+
   const name = document.createElement("h2");
   name.textContent = team.name;
-  leagueDiv.appendChild(name);
+  div.appendChild(name);
+  leagueDiv.appendChild(div);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const teamId = urlParams.get("id");
+  const leagueId = urlParams.get("league");
+
+  const enlaceFavoritos = document.createElement("a");
+  enlaceFavoritos.href = "#";
+
+  const teamsFavoritos = obtenerTeamsFavoritos();
+  if (teamsFavoritos.some((team) => team.id === teamId && team.leagueId === leagueId)) {
+    enlaceFavoritos.innerHTML = `<ion-icon name="star"></ion-icon>`;
+  } else {
+    enlaceFavoritos.innerHTML = `<ion-icon name="star-outline"></ion-icon>`;
+  }
+
+  enlaceFavoritos.addEventListener("click", () => {
+    toggleFavorito(teamId, leagueId, "teamsFavoritos", enlaceFavoritos);
+  });
+  div.appendChild(enlaceFavoritos);
+  leagueDiv.appendChild(div);
+
   detailsElement.appendChild(leagueDiv);
 }
 
@@ -126,6 +152,7 @@ async function addStatsTeam() {
   contentContainer.appendChild(playersContainer);
   detailsElement.appendChild(contentContainer);
   const seasonSelect = document.getElementById("season-select");
+
   async function showStatistics() {
     showStatisticsActive = true;
     showPlayersActive = false;
@@ -234,6 +261,7 @@ async function addStatsTeam() {
       console.log(err);
     }
   }
+  
   async function showPlayers() {
     showStatisticsActive = false;
     showPlayersActive = true;
@@ -252,6 +280,7 @@ async function addStatsTeam() {
           playerImage.alt = `${player.player.name} photo`;
           playerDiv.appendChild(playerImage);
           const playerName = document.createElement("a");
+          playerName.href = `detailPlayer.html?id=${player.player.id}`;
           playerName.textContent = player.player.name;
           playerDiv.appendChild(playerName);
           playersContainer.appendChild(playerDiv);
@@ -279,10 +308,11 @@ async function addStatsTeam() {
       }
     }
   }
+  
 
   statsButton.addEventListener("click", showStatistics);
   playersButton.addEventListener("click", async () => {
-    if (!playersLoaded) {
+    if (!showPlayersActive) {
       await showPlayers();
       playersLoaded = true;
     }

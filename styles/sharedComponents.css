@@ -17,6 +17,11 @@ nav{
     align-items: center;
 }
 
+.nav1{
+    display: flex;
+    justify-content: flex-start;
+}
+
 main{
     display: flex;
 }
@@ -31,6 +36,7 @@ main{
 
 ion-icon{
     color: #2dcc70;
+    margin-top: 0.2em;
   }
 
   a{
@@ -38,3 +44,29 @@ ion-icon{
     text-decoration: none;
     color: black;
 }
+
+.a{
+    display: flex;
+    justify-content: space-between;   
+    width: 8em;
+    margin-left: 7em;
+    margin-top: 0.5em;
+}
+
+.a div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home-icon{
+    color: #e5e5e5;
+}
+
+#matches-icon{
+    color: #e5e5e5;
+}
+
+.active-icon {
+    color: #2dcc70 !important; 
+  }
