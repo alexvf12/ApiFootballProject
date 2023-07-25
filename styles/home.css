@@ -233,8 +233,17 @@
     }
   }
   
-  
-  
-  
-  
-  
+.stadium-name{
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.home-info, .away-info{
+  width: 8em;
+}
+
+.away-info{
+  display: flex;
+  justify-content: end;
+}

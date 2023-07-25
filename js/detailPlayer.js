@@ -87,16 +87,45 @@ async function showPlayerStatistics(player) {
 
           switch (type) {
             case "games":
+            typeCell.textContent = "Games";
               statValue = teamStat[type]?.appearences ?? "-";
               break;
             case "dribbles":
+            typeCell.textContent = "Dribbles";
               statValue = teamStat[type]?.success ?? "-";
               break;
             case "fouls":
+            typeCell.textContent = "Fouls";
               statValue = teamStat[type]?.committed ?? "-";
               break;
             case "penalty":
+            typeCell.textContent = "Penalty";
               statValue = teamStat[type]?.scored ?? "-";
+              break;
+              case "shots":
+              typeCell.textContent = "Shots";
+              statValue = teamStat[type]?.total ?? "-";
+
+              break;
+            case "goals":
+              typeCell.textContent = "Goals";
+              statValue = teamStat[type]?.total ?? "-";
+
+              break;
+            case "passes":
+              typeCell.textContent = "Passes";
+              statValue = teamStat[type]?.total ?? "-";
+
+              break;
+            case "tackles":
+              typeCell.textContent = "Tackles";
+              statValue = teamStat[type]?.total ?? "-";
+
+              break;
+            case "duels":
+              typeCell.textContent = "Duels";
+              statValue = teamStat[type]?.total ?? "-";
+
               break;
             default:
               statValue = teamStat[type]?.total ?? "-";

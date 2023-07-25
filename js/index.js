@@ -42,7 +42,12 @@ async function fetchGuardiolaTrophies(coachId) {
   return data.response;
 }
 
-
+function addEllipsisIfTooLong(element, maxLength) {
+  const text = element.textContent.trim();
+  if (text.length > maxLength) {
+    element.textContent = text.slice(0, maxLength) + "...";
+  }
+}
 
 async function addLiveMatches() {
   try {
@@ -78,8 +83,10 @@ async function addLiveMatches() {
 
       const homeTeamNameDiv = document.createElement("div");
       const homeTeamName = document.createElement("p");
+      homeTeamNameDiv.classList.add("home-info");
       homeTeamName.textContent = homeTeam;
       homeTeamNameDiv.appendChild(homeTeamName);
+      addEllipsisIfTooLong(homeTeamName, 13);
       infoDiv.appendChild(homeTeamNameDiv);
 
       const scoreElemDiv = document.createElement("div");
@@ -91,8 +98,10 @@ async function addLiveMatches() {
 
       const awayTeamNameDiv = document.createElement("div");
       const awayTeamName = document.createElement("p");
+      awayTeamNameDiv.classList.add("away-info");
       awayTeamName.textContent = awayTeam;
       awayTeamNameDiv.appendChild(awayTeamName);
+      addEllipsisIfTooLong(awayTeamName, 13);
       infoDiv.appendChild(awayTeamNameDiv);
 
       const awayTeamLogoDiv = document.createElement("div");
@@ -121,10 +130,14 @@ async function addLiveMatches() {
       timeIconDiv.appendChild(timeElem);
 
       const stadiumNameDiv = document.createElement("div");
+      stadiumNameDiv.classList.add("stadium-name");
       const stadiumIcon = document.createElement("ion-icon");
       stadiumIcon.setAttribute("name", "location-outline");
       const stadiumElem = document.createElement("p");
-      stadiumElem.innerHTML = `<ion-icon name="location-outline"></ion-icon> ${stadium}`;
+      stadiumIcon.innerHTML = `<ion-icon name="location-outline"></ion-icon>`
+      stadiumElem.innerHTML = ` ${stadium}`;
+      addEllipsisIfTooLong(stadiumElem, 21);
+      stadiumNameDiv.appendChild(stadiumIcon);
       stadiumNameDiv.appendChild(stadiumElem);
 
       matchInfo.appendChild(timeIconDiv);
