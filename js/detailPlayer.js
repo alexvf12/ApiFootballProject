@@ -131,11 +131,11 @@ async function addContentPlayer() {
 
     const img = document.createElement("img");
     img.src = player.player.photo;
-    img.alt = `${player.player.firstname} ${player.player.name} logo`;
+    img.alt = `${player.player.name} logo`;
     playerDiv.appendChild(img);
 
     const name = document.createElement("h2");
-    name.textContent = `${player.player.firstname} ${player.player.name}`;
+    name.textContent = ` ${player.player.name}`;
     playerDiv.appendChild(name);
 
     detailsElement.appendChild(playerDiv);

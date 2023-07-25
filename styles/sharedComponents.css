@@ -36,7 +36,6 @@ main{
 
 ion-icon{
     color: #2dcc70;
-    margin-top: 0.2em;
   }
 
   a{
@@ -69,4 +68,8 @@ ion-icon{
 
 .active-icon {
     color: #2dcc70 !important; 
+  }
+
+  #league-list a ion-icon{
+    margin-top: 0.5em;
   }

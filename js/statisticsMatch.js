@@ -28,7 +28,6 @@ async function addStatisticsMatch() {
     statsContainer.setAttribute("id", "statistics");
     detailsElement.appendChild(statsContainer);
 
-    // Summary button
     const eventsContainer = document.createElement("div");
     eventsContainer.setAttribute("id", "summary");
     detailsElement.appendChild(eventsContainer);
@@ -83,7 +82,6 @@ async function addStatisticsMatch() {
 
         eventItem.innerHTML += `${event.time.elapsed}' ${event.player.name}`;
 
-        // Agregar la clase "homeEvent" si el evento pertenece al equipo home
         if (event.team.id === match.teams.home.id) {
           eventItem.classList.add("homeEvent");
         } else {
@@ -93,7 +91,6 @@ async function addStatisticsMatch() {
         firstHalfList.appendChild(eventItem);
       });
 
-      // Agregar la lista de eventos del primer tiempo al contenedor
       eventsContainer.appendChild(firstHalfList);
 
       // Second time
@@ -101,22 +98,18 @@ async function addStatisticsMatch() {
         (event) => event.time.elapsed > 45
       );
 
-      // Crear un elemento <div> para mostrar la barra de segundo tiempo
       const secondHalfBar = document.createElement("div");
       secondHalfBar.classList.add("secondHalf");
       secondHalfBar.textContent = "2nd HALF";
       eventsContainer.appendChild(secondHalfBar);
 
-      // Crear un elemento <ul> para mostrar los eventos del segundo tiempo
       const secondHalfList = document.createElement("ul");
       secondHalfList.classList.add("secondHalfList");
 
-      // Ordenar los eventos del segundo tiempo por el número elapsed
       const sortedSecondHalfEvents = secondHalfEvents.sort(
         (a, b) => a.time.elapsed - b.time.elapsed
       );
 
-      // Recorrer los eventos del segundo tiempo y crear elementos <li> para cada uno
       sortedSecondHalfEvents.forEach((event) => {
         const eventItem = document.createElement("li");
 
@@ -144,7 +137,6 @@ async function addStatisticsMatch() {
 
         eventItem.innerHTML += ` ${event.time.elapsed}' ${event.player.name}`;
 
-        // Agregar la clase "homeEvent" si el evento pertenece al equipo home
         if (event.team.id === match.teams.home.id) {
           eventItem.classList.add("homeEvent");
         } else {
@@ -154,7 +146,6 @@ async function addStatisticsMatch() {
         secondHalfList.appendChild(eventItem);
       });
 
-      // Agregar la lista de eventos del segundo tiempo al contenedor
       eventsContainer.appendChild(secondHalfList);
     }
 
@@ -167,7 +158,6 @@ async function addStatisticsMatch() {
 
       const statsList = document.createElement("ul");
 
-      // Recorrer las estadísticas y crear elementos <li> para cada una
       statistics.forEach((stat) => {
         const statItem = document.createElement("li");
         statItem.textContent = `${stat.team.name}: ${stat.statistics
@@ -176,7 +166,6 @@ async function addStatisticsMatch() {
         statsList.appendChild(statItem);
       });
 
-      // Agregar la lista de estadísticas al contenedor
       statsContainer.appendChild(statsList);
     }
   } catch (err) {

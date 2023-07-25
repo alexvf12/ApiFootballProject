@@ -143,18 +143,15 @@ async function toggleFavorito(idleague, enlaceFavoritos) {
   const indice = leaguesFavoritas.indexOf(idleague);
 
   if (indice === -1) {
-    // If the league ID is not in favorites, add it
     leaguesFavoritas.push(idleague);
     enlaceFavoritos.innerHTML = `<ion-icon name="star"></ion-icon>`;
   } else {
-    // If the league ID is already in favorites, remove it
     leaguesFavoritas.splice(indice, 1);
     enlaceFavoritos.innerHTML = `<ion-icon name="star-outline"></ion-icon>`;
   }
 
   localStorage.setItem("leaguesFavoritas", JSON.stringify(leaguesFavoritas));
 
-  // Update the displayed favorites without refreshing the page
   await displayFavorites();
 }
 

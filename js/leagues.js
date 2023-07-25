@@ -41,7 +41,7 @@ async function addRandomLeagues() {
       div.appendChild(contentDiv);
       div.appendChild(icon);
 
-      listContainer.appendChild(div); // Agregamos el div al contenedor de la lista
+      listContainer.appendChild(div); 
     });
   } catch (err) {
     console.log(err);
@@ -77,7 +77,7 @@ async function addTopLeagues() {
       div.appendChild(contentDiv);
       div.appendChild(icon);
 
-      listContainer.appendChild(div); // Agregamos el div al contenedor de la lista
+      listContainer.appendChild(div);
     });
   } catch (err) {
     console.log(err);

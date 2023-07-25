@@ -206,16 +206,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function markActiveIcon() {
-  // Obtener el nombre de la página actual de la URL
   const currentPage = window.location.pathname.split("/").pop();
 
-  // Verificar si estamos en la página "home.html" y activar el ícono correspondiente
   if (currentPage === "home.html") {
     const homeIcon = document.getElementById("home-icon");
     homeIcon.classList.add("active-icon");
   }
 
-  // Verificar si estamos en la página "matches.html" y activar el ícono correspondiente
   if (currentPage === "matches.html") {
     const matchesIcon = document.getElementById("matches-icon");
     matchesIcon.classList.add("active-icon");
