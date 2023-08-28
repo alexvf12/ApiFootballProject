@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function markActiveIcon() {
   const currentPage = window.location.pathname.split("/").pop();
 
-  if (currentPage === "index.html") {
+  if (currentPage === "" || currentPage === "index.html") {
     const homeIcon = document.getElementById("home-icon");
     homeIcon.classList.add("active-icon");
   }
