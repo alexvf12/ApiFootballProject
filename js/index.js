@@ -61,7 +61,7 @@ async function addLiveMatches() {
       const awayLogo = match.teams.away.logo;
       const score = `${match.goals.home} - ${match.goals.away}`;
       const matchTime = new Date(match.fixture.date);
-      matchTime.setHours(matchTime.getHours() + 2);
+      matchTime.setHours(matchTime.getHours());
       const stadium = match.fixture.venue.name;
 
       const matchBox = document.createElement("div");
