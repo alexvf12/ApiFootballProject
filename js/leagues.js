@@ -19,11 +19,11 @@ async function addRandomLeagues() {
     randomLeagues.forEach((league) => {
       const a = document.createElement("a");
       a.textContent = league.league.name;
-      a.href = `detailLeague.html?id=${league.league.id}`;
+      a.href = `/html/detailLeague.html?id=${league.league.id}`;
       a.style.whiteSpace = "nowrap";
 
       const div = document.createElement("a");
-      div.href = `detailLeague.html?id=${league.league.id}`;
+      div.href = `/html/detailLeague.html?id=${league.league.id}`;
       const contentDiv = document.createElement("div");
       const img = document.createElement("img");
       const icon = document.createElement("ion-icon");
@@ -56,10 +56,10 @@ async function addTopLeagues() {
     leagues.forEach((league) => {
       const a = document.createElement("a");
       a.textContent = league.league.name;
-      a.href = `detailLeague.html?id=${league.league.id}`;
+      a.href = `/html/detailLeague.html?id=${league.league.id}`;
 
       const div = document.createElement("a");
-      div.href = `detailLeague.html?id=${league.league.id}`;
+      div.href = `/html/detailLeague.html?id=${league.league.id}`;
       const contentDiv = document.createElement("div");
       const img = document.createElement("img");
       const icon = document.createElement("ion-icon");
