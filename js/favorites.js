@@ -50,7 +50,7 @@ async function displayFavorites() {
 
       const a = document.createElement("a");
       a.textContent = league.name;
-      a.href = `detailLeague.html?id=${league.id}`;
+      a.href = `/html/detailLeague.html?id=${league.id}`;
 
       const contentDiv = document.createElement("div");
 
@@ -95,7 +95,7 @@ async function displayFavorites() {
 
       const a = document.createElement("a");
       a.textContent = team.name;
-      a.href = `detailTeam.html?id=${team.id}&league=${team.leagueId}`;
+      a.href = `/html/detailTeam.html?id=${team.id}&league=${team.leagueId}`;
 
       const contentDiv = document.createElement("div");
 

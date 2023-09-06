@@ -89,7 +89,7 @@ async function addContentTeams() {
       const venue = teamData.venue;
 
       const teamDiv = document.createElement("a");
-      teamDiv.href = `detailTeam.html?id=${team.id}&league=${leagueId}`;
+      teamDiv.href = `/html/detailTeam.html?id=${team.id}&league=${leagueId}`;
       teamDiv.classList.add("team");
 
       const logoDiv = document.createElement("div");
@@ -126,7 +126,7 @@ async function addContentTeams() {
       const moreDetailsDiv = document.createElement("div");
       moreDetailsDiv.classList.add("league-more-details");
       const detailsLink = document.createElement("a");
-      detailsLink.href = `detailTeam.html?id=${team.id}&league=${leagueId}`;
+      detailsLink.href = `/html/detailTeam.html?id=${team.id}&league=${leagueId}`;
       detailsLink.innerHTML = `<ion-icon name="arrow-forward-circle-outline"></ion-icon>`;
       moreDetailsDiv.appendChild(detailsLink);
       teamDiv.appendChild(moreDetailsDiv);

@@ -51,7 +51,7 @@ const searchLeaguesAndTeams = async (searchText) => {
           leagueLink.classList.add("league");
           leagueLink.setAttribute(
             "href",
-            `detailLeague.html?id=${league.league.id}`
+            `/html/detailLeague.html?id=${league.league.id}`
           );
           leagueDiv.appendChild(leagueLink);
           resultsContainer.appendChild(leagueDiv);

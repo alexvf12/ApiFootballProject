@@ -150,7 +150,7 @@ async function addLiveMatches() {
       matchLinks.classList.add("match-links");
 
       const detailsLink = document.createElement("a");
-      detailsLink.href = `detailMatch.html?id=${match.fixture.id}`;
+      detailsLink.href = `/html/detailMatch.html?id=${match.fixture.id}`;
       detailsLink.innerHTML = `<ion-icon name="arrow-forward-circle-outline"></ion-icon>`;
 
       matchLinks.appendChild(detailsLink);

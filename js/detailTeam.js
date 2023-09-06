@@ -280,7 +280,7 @@ async function addStatsTeam() {
           playerImage.alt = `${player.player.name} photo`;
           playerDiv.appendChild(playerImage);
           const playerName = document.createElement("a");
-          playerName.href = `detailPlayer.html?id=${player.player.id}`;
+          playerName.href = `/html/detailPlayer.html?id=${player.player.id}`;
           playerName.textContent = player.player.name;
           playerDiv.appendChild(playerName);
           playersContainer.appendChild(playerDiv);
@@ -296,7 +296,7 @@ async function addStatsTeam() {
             playerImage.alt = `${player.player.name} photo`;
             playerDiv.appendChild(playerImage);
             const playerName = document.createElement("a");
-            playerName.href = `detailPlayer.html?id=${player.player.id}`;
+            playerName.href = `/html/detailPlayer.html?id=${player.player.id}`;
             playerName.style.whiteSpace = "nowrap";
             playerName.textContent = player.player.name;
             playerDiv.appendChild(playerName);
